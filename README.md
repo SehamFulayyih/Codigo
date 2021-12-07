@@ -1,4 +1,4 @@
-# Codig
+# CodiGo
 finalproject
 Description
 First of all, you have to choose the field of programming that you will complete, and there are many areas of programming.
