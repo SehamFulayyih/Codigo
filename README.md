@@ -15,7 +15,6 @@ Or Objective-C or Swift languagesfor programming applications running on Mac (Ap
 
 ##  User Stories
 + As a user ,I can Registration by email and password
-+ Registration : As I can sign up in theIn the application to take advantage Learn some programming languages
 + As a user ,I can login by email and password
 + As a user use the Course
 + As a user The application has challenges and courses
