@@ -34,8 +34,8 @@ class SingUpVC :UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated : true)
             }else {
-                UserApi.addUser(name: "Seham", uid: authResult?.user.uid ?? "", phone: "", email: authResult?.user.email ?? "", completion: { b in
-                    if b {
+                UserApi.addUser(name: "Seham", uid: authResult?.user.uid ?? "", phone: "", email: authResult?.user.email ?? "", completion: { singup in
+                    if singup {
                         self.performSegue(withIdentifier: "home", sender: nil)
                     }
                 })
