@@ -11,7 +11,7 @@ class SectionViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     var sections : [section] = []
-    
+    var selectedSection: section?
     @IBOutlet weak var sectionCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -42,7 +42,13 @@ class SectionViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     }
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? SectionViewController
+        vc?.selectedSection  = self.selectedSection
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedSection = sections[indexPath.row]
+    }
     func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexpath: IndexPath)-> CGSize {
             return CGSize(width: view.bounds.width, height: view.bounds.width/3)
         }
