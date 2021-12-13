@@ -1,20 +1,17 @@
 //
-//  Section.swift
+//  Product.swift
 //  Codigo
 //
-//  Created by Seham الشطنان on 08/05/1443 AH.
+//  Created by Seham الشطنان on 09/05/1443 AH.
 //
 
 import Foundation
 
-struct section {
+
+struct Product {
     
     let name: String
-    let Products : String
     let imageName : String
     let describetion : String
     let informations : String
-    
-    
-    
 }

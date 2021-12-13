@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             
-            if let error = error {
+            if error != nil {
                 let alert = UIAlertController(title: "Error", message: "Sorry ,we could not find your account.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self?.present(alert, animated : true)

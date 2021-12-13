@@ -12,5 +12,6 @@ class SectionViewControllerCell: UICollectionViewCell{
     
     @IBOutlet weak var sectionimageView: UIImageView!
     
+    
     }
 
