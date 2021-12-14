@@ -20,6 +20,7 @@ class DetalsVC: UIViewController {
     
 
     @IBOutlet weak var information: UICollectionView!
+    
     var selectedSectionInfo: [Information]?
     
     override func viewDidLoad() {
@@ -32,34 +33,34 @@ class DetalsVC: UIViewController {
         describetion.text = selectedSection.describetion
         selectedSectionInfo = selectedSection.informations
         
+        information.delegate = self
+        information.dataSource = self
         // Do any additional setup after loading the view.
     }
     
 
 }
 
-extension DetalsVC : UICollectionViewDelegate,UICollectionViewDataSource {
-    private func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    func sectionCollectionView.delegate = self
-    sectionCollectionView.dataSource = self
+extension DetalsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
-    private func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? <#type#>
-        
-        
-        
-        
-        
-    }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return selectedSectionInfo?.count ?? 0
-        
+        return selectedSection.informations.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "informationCell", for: indexPath) as! InformationCollectionViewCell
+        
+        cell.imageName.image = UIImage(named: selectedSection.informations[indexPath.row].imageName)
+        
+    
+        return cell
+    }
+    
+    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexpath: IndexPath)-> CGSize {
+        return CGSize(width: 200, height: 200)
+    }
+    
+    
 }

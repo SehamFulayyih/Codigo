@@ -9,7 +9,7 @@ import Foundation
 
 struct Information {
     
-    var title : String
+    var titaleLabel : String
     var imageName : String
     
     
