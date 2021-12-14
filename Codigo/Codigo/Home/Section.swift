@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct section {
+struct Section {
     
     let name: String
     let Products : String
     let imageName : String
     let describetion : String
-    let informations : String
+    let secondImage : String
+    let informations : [Information]
     
     
     

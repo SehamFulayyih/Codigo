@@ -9,26 +9,35 @@ import UIKit
 class SectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
-    var sections : [section] = []
-    var selectedSection: section?
+    var sections : [Section] = []
+    var selectedSection: Section?
+    
     @IBOutlet weak var sectionCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sectionCollectionView.delegate = self
         sectionCollectionView.dataSource = self
+        
+        
         // Do any additional setup after loading the view.
         
-        let swiftSection = section (name: "swift", Products: "", imageName: "image-13", describetion: "is friendly to new programmers.It's an industrial-quality programming language that's as expresssive and enjoyable as a scripting language.", informations: "image-10")
-        let  javascriptSection = section (name: "javascript" , Products: "", imageName: "image-12", describetion: "is the world's most popular programming language with first-class functions.", informations: "image-9" )
-        let pythonSection = section (name: "python", Products: "", imageName: "image-14", describetion: "is the most wanted language.Python's simple easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance.", informations: "image-11")
+        let swiftSection = Section (name: "swift", Products: "", imageName: "image-13", describetion: "is friendly to new programmers.It's an industrial-quality programming language that's as expresssive and enjoyable as a scripting language.", secondImage: "image-10", informations:[Information(title: "Output", imageName: "Output.imagejpg"),Information(title: "Variable", imageName: "Variable.imagejpg"),Information(title: "ForLoop", imageName: "Loopimage"),Information(title: "Boolean", imageName: "Booleanimage"),Information(title: "ConditionalStatement", imageName: "Conditionalimage"),Information(title: "Dictionarie", imageName: "Dictionnariimage"),Information(title: "Array", imageName: "ListorArrayimage")])
+        
+        let  javascriptSection = Section (name: "javascript" , Products: "", imageName: "image-12", describetion: "is the world's most popular programming language with first-class functions.", secondImage: "image-9", informations:[Information(title: "Output", imageName: "Output.imagejpg"),Information(title: "Variable", imageName: "Variable.imagejpg"),Information(title: "ForLoop", imageName: "Loopimage"),Information(title: "Boolean", imageName: "Booleanimage"),Information(title: "ConditionalStatement", imageName: "Conditionalimage"),Information(title: "Array", imageName: "ListorArrayimage")] )
+        
+        let pythonSection = Section (name: "python", Products: "", imageName: "image-14", describetion: "is the most wanted language.Python's simple easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance.", secondImage: "image-11", informations: [Information(title: "Output", imageName: "Output.imagejpg"),Information(title: "Variable", imageName: "Variable.imagejpg"),Information(title: "ForLoop", imageName: "Loopimage"),Information(title: "List", imageName: "ListorArrayimage"),Information(title: "Dictionarie", imageName: "Dictionnariimage"),Information(title: "Boolean", imageName: "Booleanimage"),Information(title: "ConditionalStatement", imageName: "Conditionalimage")])
         
         sections.append(swiftSection)
         sections.append(javascriptSection)
         sections.append(pythonSection)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
+        
+        //if sectionCollectionView == collectionView {
+            return sections.count
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

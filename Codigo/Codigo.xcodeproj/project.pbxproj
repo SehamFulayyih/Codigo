@@ -11,6 +11,7 @@
 		9D038392276716FD0087AC02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D038391276716FC0087AC02 /* TableViewController.swift */; };
 		9D03839427672D700087AC02 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03839327672D700087AC02 /* Product.swift */; };
 		9D038397276740420087AC02 /* DetalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D038396276740420087AC02 /* DetalsVC.swift */; };
+		9D0D71FC276870A700F11790 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D71FB276870A700F11790 /* Information.swift */; };
 		9D14D52F275E1A6600D04275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D52E275E1A6600D04275 /* AppDelegate.swift */; };
 		9D14D531275E1A6600D04275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D530275E1A6600D04275 /* SceneDelegate.swift */; };
 		9D14D533275E1A6600D04275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D532275E1A6600D04275 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		9D038391276716FC0087AC02 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9D03839327672D700087AC02 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9D038396276740420087AC02 /* DetalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalsVC.swift; sourceTree = "<group>"; };
+		9D0D71FB276870A700F11790 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		9D14D52B275E1A6600D04275 /* Codigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D14D52E275E1A6600D04275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D14D530275E1A6600D04275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,13 @@
 			path = Detals;
 			sourceTree = "<group>";
 		};
+		9D0D71FD2768770E00F11790 /* Models. */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models.;
+			sourceTree = "<group>";
+		};
 		9D14D522275E1A6600D04275 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +143,7 @@
 		9D14D52D275E1A6600D04275 /* Codigo */ = {
 			isa = PBXGroup;
 			children = (
+				9D0D71FD2768770E00F11790 /* Models. */,
 				9D24FDAB2765049F0095E2BB /* Segmented */,
 				9D24FDAA2765044B0095E2BB /* Animation */,
 				9D24FDA92765042B0095E2BB /* Sign Up */,
@@ -188,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9D03839327672D700087AC02 /* Product.swift */,
+				9D0D71FB276870A700F11790 /* Information.swift */,
 				9D01051B2765D527003FD5B6 /* Section.swift */,
 				9D1F921F2763D4600098DCFE /* SectionCollectionViewCell.swift */,
 				9D1F92212763FB110098DCFE /* SectionViewController.swift */,
@@ -391,6 +402,7 @@
 				9D03839427672D700087AC02 /* Product.swift in Sources */,
 				9D038397276740420087AC02 /* DetalsVC.swift in Sources */,
 				9D01051C2765D527003FD5B6 /* Section.swift in Sources */,
+				9D0D71FC276870A700F11790 /* Information.swift in Sources */,
 				9D038392276716FD0087AC02 /* TableViewController.swift in Sources */,
 				9D14D52F275E1A6600D04275 /* AppDelegate.swift in Sources */,
 				9D23B7012761E38E00B08DE7 /* UserApi.swift in Sources */,
