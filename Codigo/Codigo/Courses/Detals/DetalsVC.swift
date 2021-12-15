@@ -53,7 +53,7 @@ extension DetalsVC : UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "informationCell", for: indexPath) as! InformationCollectionViewCell
         
         cell.imageName.image = UIImage(named: selectedSection.informations[indexPath.row].imageName)
-        
+        cell.titaleLabel.text = selectedSection.informations[indexPath.row].titaleLabel
     
         return cell
     }

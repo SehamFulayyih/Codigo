@@ -7,7 +7,9 @@
 
 import UIKit
 import Firebase
-class ViewController: UIViewController {
+import FirebaseAuth
+
+class SignInVC: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -15,6 +17,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    fileprivate func checkUserIsLogin() {
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: "Home", sender: nil)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkUserIsLogin()
     }
     func SignIn(email: String,password:String) {
         

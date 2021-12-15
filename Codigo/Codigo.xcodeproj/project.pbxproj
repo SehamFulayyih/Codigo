@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9D01051C2765D527003FD5B6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01051B2765D527003FD5B6 /* Section.swift */; };
-		9D038392276716FD0087AC02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D038391276716FC0087AC02 /* TableViewController.swift */; };
+		9D038392276716FD0087AC02 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D038391276716FC0087AC02 /* CoursesTableViewController.swift */; };
 		9D03839427672D700087AC02 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03839327672D700087AC02 /* Product.swift */; };
 		9D038397276740420087AC02 /* DetalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D038396276740420087AC02 /* DetalsVC.swift */; };
+		9D0CD01E2769D9340054B988 /* ChallengesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CD01D2769D9340054B988 /* ChallengesStruct.swift */; };
+		9D0CD0202769DC590054B988 /* RegisterChallengesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CD01F2769DC590054B988 /* RegisterChallengesVC.swift */; };
 		9D0D71FC276870A700F11790 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D71FB276870A700F11790 /* Information.swift */; };
 		9D0D71FF2768C8D700F11790 /* InformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D71FE2768C8D700F11790 /* InformationCollectionViewCell.swift */; };
+		9D1053A627693ACC0074ADB2 /* ChallengesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1053A527693ACC0074ADB2 /* ChallengesVC.swift */; };
 		9D14D52F275E1A6600D04275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D52E275E1A6600D04275 /* AppDelegate.swift */; };
 		9D14D531275E1A6600D04275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D530275E1A6600D04275 /* SceneDelegate.swift */; };
-		9D14D533275E1A6600D04275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D532275E1A6600D04275 /* ViewController.swift */; };
+		9D14D533275E1A6600D04275 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14D532275E1A6600D04275 /* SignInVC.swift */; };
 		9D14D536275E1A6600D04275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D14D534275E1A6600D04275 /* Main.storyboard */; };
 		9D14D53B275E1A6700D04275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D14D53A275E1A6700D04275 /* Assets.xcassets */; };
 		9D14D53E275E1A6700D04275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D14D53C275E1A6700D04275 /* LaunchScreen.storyboard */; };
@@ -52,15 +55,18 @@
 
 /* Begin PBXFileReference section */
 		9D01051B2765D527003FD5B6 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		9D038391276716FC0087AC02 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9D038391276716FC0087AC02 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		9D03839327672D700087AC02 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9D038396276740420087AC02 /* DetalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalsVC.swift; sourceTree = "<group>"; };
+		9D0CD01D2769D9340054B988 /* ChallengesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesStruct.swift; sourceTree = "<group>"; };
+		9D0CD01F2769DC590054B988 /* RegisterChallengesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterChallengesVC.swift; sourceTree = "<group>"; };
 		9D0D71FB276870A700F11790 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		9D0D71FE2768C8D700F11790 /* InformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InformationCollectionViewCell.swift; path = Codigo/Home/InformationCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		9D1053A527693ACC0074ADB2 /* ChallengesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesVC.swift; sourceTree = "<group>"; };
 		9D14D52B275E1A6600D04275 /* Codigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D14D52E275E1A6600D04275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D14D530275E1A6600D04275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9D14D532275E1A6600D04275 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D14D532275E1A6600D04275 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		9D14D535275E1A6600D04275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D14D53A275E1A6700D04275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D14D53D275E1A6700D04275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -212,7 +218,7 @@
 		9D24FDA62765039E0095E2BB /* Courses */ = {
 			isa = PBXGroup;
 			children = (
-				9D038391276716FC0087AC02 /* TableViewController.swift */,
+				9D038391276716FC0087AC02 /* CoursesTableViewController.swift */,
 				9D038395276740260087AC02 /* Detals */,
 			);
 			path = Courses;
@@ -221,6 +227,9 @@
 		9D24FDA7276503B30095E2BB /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
+				9D1053A527693ACC0074ADB2 /* ChallengesVC.swift */,
+				9D0CD01D2769D9340054B988 /* ChallengesStruct.swift */,
+				9D0CD01F2769DC590054B988 /* RegisterChallengesVC.swift */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -236,7 +245,7 @@
 		9D24FDA92765042B0095E2BB /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
-				9D14D532275E1A6600D04275 /* ViewController.swift */,
+				9D14D532275E1A6600D04275 /* SignInVC.swift */,
 				9D1B89AA275F9D1600089A6B /* SignUpVC.swift */,
 			);
 			path = "Sign Up";
@@ -402,15 +411,18 @@
 				9D1F92222763FB110098DCFE /* SectionViewController.swift in Sources */,
 				9D0D71FF2768C8D700F11790 /* InformationCollectionViewCell.swift in Sources */,
 				9D24FDAD2765267C0095E2BB /* ProfileVC.swift in Sources */,
-				9D14D533275E1A6600D04275 /* ViewController.swift in Sources */,
+				9D14D533275E1A6600D04275 /* SignInVC.swift in Sources */,
 				9D03839427672D700087AC02 /* Product.swift in Sources */,
 				9D038397276740420087AC02 /* DetalsVC.swift in Sources */,
 				9D01051C2765D527003FD5B6 /* Section.swift in Sources */,
 				9D0D71FC276870A700F11790 /* Information.swift in Sources */,
-				9D038392276716FD0087AC02 /* TableViewController.swift in Sources */,
+				9D038392276716FD0087AC02 /* CoursesTableViewController.swift in Sources */,
+				9D0CD0202769DC590054B988 /* RegisterChallengesVC.swift in Sources */,
 				9D14D52F275E1A6600D04275 /* AppDelegate.swift in Sources */,
+				9D1053A627693ACC0074ADB2 /* ChallengesVC.swift in Sources */,
 				9D23B7012761E38E00B08DE7 /* UserApi.swift in Sources */,
 				9D3F8B362760D90900EB2A32 /* User.swift in Sources */,
+				9D0CD01E2769D9340054B988 /* ChallengesStruct.swift in Sources */,
 				9D14D531275E1A6600D04275 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
