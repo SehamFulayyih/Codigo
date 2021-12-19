@@ -6,93 +6,42 @@
 //
 
 //import UIKit
+//import FirebaseFirestore
+
 //class TableViewController: UITableViewController {
-  //let section: section? = nil
-//let User: User? = nil
-    //var MyCourses = [
-//section(name: "swift", image: UIImage(named: "images")!),
-//section(name: "javascript", image: UIImage(named: "images")!),
-//section(name: "python", image: UIImage(named: "images")!)]
+   // var  populateChallenges =  [ populateChallenges]
+   // var selctedId : String?
+   // var setselctedId : String?
 
-//let defaults = UserDefaults.standard
-    //override func viewDidLoad() {
-      //  super.viewDidLoad()
-
+   // override func viewDidLoad()  {
+ // super.viewDidLoad()
+ // setselctedId = selctedId
+ //    guard let setselctedId = setselctedId else {
+      //   return
+    //     Api.get (id :setselctedId) {   in
+        //     print ()
+        //     DispatchQueue.main.async {
+           //      self.populateChallenges.append(<#T##Element#>)
+              //   self.tableView.reloadData()
+            // }//   }
+   //  }
+  //   func tableView(_tableView: UITableView, numberOfRowsInSection  section : Int) ->Int {
+      //   return  populateChallenges.count
 //}
-//
-//override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
- //   MyCourses.count
-  // }
- //  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-       
-      // let cell = tableView.dequeueReusableCell(withIdentifier: "mysection", for: indexPath) as! CollectionCell
-       
-      // cell.nameProduct.text =  MyCourses[indexPath.row].name
-       
-       //cell.CollectionImage.image =   MyCourses[indexPath.row].image
-       
-       //cell.textLabel?.text = Listofproducts[indexPath.row]
-       
-    //   return cell
-  // }
-   
-  // override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      // let alert = UIAlertController(title: "Add", message: "Add", preferredStyle: .actionSheet)
-     //  let addAction = UIAlertAction(title: "Add", style: .cancel, handler:{ action in
-           
-    //   })
-       
-      // alert.addAction(addAction)
-     //  present(alert, animated: true)
-       
-  // }
-   
- //  override func numberOfSections(in tableView: UITableView) -> Int {
-       // #warning Incomplete implementation, return the number of sections
-      // return 1
-  // }
-   
-   // Override to support editing the table view.
-   //override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //   if editingStyle == .delete {
-           // Delete the row from the data source
-          // self. MyCourses.remove(at: indexPath.row)
-         //  self.tableView.deleteRows(at: [indexPath], with: .automatic)
-     //  }
-   //}
-   
-   
- //  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-  //     return 120
-  // }
- //  override func tableView(_ _tableView: UITableView,moveRowAt sourceIndexpath: IndexPath, to destinationIndexpath : IndexPath){
-       
-      // if sourceIndexpath == destinationIndexpath {
-        //   return
-      // } else {
-           
-          // let  =  MyCourses.remove(at: sourceIndexpath.row)
-         //  MyCourses.insert( listItem, at: destinationIndexpath.row)
-     //  }
-       
- //  }
-              // self. MyCourses.append(newProductToAdd)
-              // let index = [IndexPath(item: self. //MyCourses.count-1, section: 0)]
-             //  self.tableView.insertRows(at: index, with: .automatic)
-              //  MyCourses.section.append(newProductToAdd)
-            //   self.tableView.reloadData()
-               
-        //   }
-      // }))
-       
-      // self.present(alert, animated: true)
-       
-  // }
-   
-   
-   
-   
-  
-   
-
+  //   func tableView(_tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell {
+      //   let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath) as TableViewController
+       //  guard let url = URL(string:   [indexPath.row].description } else do {return UITableViewCell() }
+                           //  if let data = try ? Data (contentsOf: url {
+        //     cell.imageData.image = UIImage(data :data)
+       //  }
+                     //                                  cell.name.text =  [indexPath.raw].name
+                                                   //    return cell
+  //   }
+                                                   //    override //func  tableView(_tableView:UITableView , didSelectRowAt:indexPath:IndexPath ){
+          //   performSegue(withIdentifier: " ToCell", sender: nil)
+       //  }
+                        //                               override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+          //   if segue.identifier == "ToCell" {
+      //   }
+//}
+                                          //            }
