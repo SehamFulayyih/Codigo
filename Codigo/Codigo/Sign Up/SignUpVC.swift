@@ -19,12 +19,12 @@ class SingUpVC :UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // Do any additional setup after loading the view.
     }
     func SignUp(email: String,password:String,userName: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-           
+            
             print("email:\(String(describing: authResult?.user.email))")
             print("uid:\(String(describing: authResult?.user.uid))")
             
@@ -47,7 +47,7 @@ class SingUpVC :UIViewController {
     @IBAction func signButton(_ sender: UIButton) {
         
         SignUp(email: email.text ?? "", password: passWord.text  ?? "",userName:userName.text ?? "")
-       // self.performSegue(withIdentifier: "singUp", sender: nil)
+        // self.performSegue(withIdentifier: "singUp", sender: nil)
         
     }
     

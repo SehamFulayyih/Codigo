@@ -28,11 +28,11 @@ class ChallengesVC: UIViewController {
         performSegue(withIdentifier: "goChallanges", sender: nil)
     }
     @IBAction func learnJavascript(_ sender: Any) {
-        selectedLanguage = .python
+        selectedLanguage = .javascript
         performSegue(withIdentifier: "goChallanges", sender: nil)
     }
     @IBAction func learnPython(_ sender: Any) {
-        selectedLanguage = .javascript
+        selectedLanguage = .python
         performSegue(withIdentifier: "goChallanges", sender: nil)
     }
     
