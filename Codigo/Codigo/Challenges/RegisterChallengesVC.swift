@@ -28,6 +28,9 @@ class RegisterChallengesVC: UIViewController {
     @IBAction func trueQl(_ sender: Any) {
         if selectedLanguagequestion[currentquestionindex].answer == true {
             setNextQuestion()
+        } else {
+            [currentquestionindex].count
+            
         }
         
     }
@@ -36,6 +39,8 @@ class RegisterChallengesVC: UIViewController {
     @IBAction func falseQl(_ sender: Any) {
         if selectedLanguagequestion[currentquestionindex].answer == false {
             setNextQuestion()
+        }else{
+            [currentquestionindex].count
         }
     }
     
@@ -43,7 +48,18 @@ class RegisterChallengesVC: UIViewController {
     func setNextQuestion () {
         
         currentquestionindex += 1
-        question.text = selectedLanguagequestion[currentquestionindex].question
+        if selectedLanguagequestion.count != currentquestionindex {
+            question.text = selectedLanguagequestion[currentquestionindex].question
+        } else {
+            
+            // show alert
+            
+///             desible Buttons
+///            - true
+///            - false
+            
+        }
+        
     }
     
     
