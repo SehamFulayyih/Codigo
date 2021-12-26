@@ -8,9 +8,9 @@
 import UIKit
 
 class RegisterChallengesVC: UIViewController {
-    
+    var setSectionImageView : UIImageView!
     @IBOutlet weak var imageChallenges: UIImageView!
-    
+       
     var currentquestionindex : Int = 0
   
     var selectedLanguage : Language?
@@ -29,8 +29,7 @@ class RegisterChallengesVC: UIViewController {
         if selectedLanguagequestion[currentquestionindex].answer == true {
             setNextQuestion()
         } else {
-            [currentquestionindex].count
-            
+           
         }
         
     }
@@ -40,20 +39,23 @@ class RegisterChallengesVC: UIViewController {
         if selectedLanguagequestion[currentquestionindex].answer == false {
             setNextQuestion()
         }else{
-            [currentquestionindex].count
+           
         }
     }
     
     
     func setNextQuestion () {
         
-        currentquestionindex += 1
-        if selectedLanguagequestion.count != currentquestionindex {
+        if   currentquestionindex < selectedLanguagequestion.count-1 {
+            currentquestionindex += 1
             question.text = selectedLanguagequestion[currentquestionindex].question
         } else {
             
-            // show alert
+            let alert = UIAlertController(title: "Congratulation on solving the question", message: nil, preferredStyle: .alert)
             
+              alert.addAction(UIAlertAction(title: "Go to the languages you want", style: .default, handler: nil))
+              self.present(alert, animated : true)
+          
 ///             desible Buttons
 ///            - true
 ///            - false
