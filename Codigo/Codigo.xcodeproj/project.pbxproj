@@ -34,8 +34,6 @@
 		9D23B7012761E38E00B08DE7 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23B7002761E38E00B08DE7 /* UserApi.swift */; };
 		9D3F8B362760D90900EB2A32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3F8B352760D90900EB2A32 /* User.swift */; };
 		9D6D6B612778666C003CAD6C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D6B602778666C003CAD6C /* ProfileVC.swift */; };
-		9D6D6B6827789879003CAD6C /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D6B6727789878003CAD6C /* LanguageVC.swift */; };
-		9D6D6B6A277898C9003CAD6C /* ThemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D6B69277898C9003CAD6C /* ThemeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +83,6 @@
 		9D23B7002761E38E00B08DE7 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		9D3F8B352760D90900EB2A32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9D6D6B602778666C003CAD6C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		9D6D6B6727789878003CAD6C /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
-		9D6D6B69277898C9003CAD6C /* ThemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +157,7 @@
 				9D24FDA92765042B0095E2BB /* Sign Up */,
 				9D24FDA8276503FF0095E2BB /* Profile */,
 				9D24FDA7276503B30095E2BB /* Challenges */,
-				9D24FDA62765039E0095E2BB /* Courses */,
+				9D24FDA62765039E0095E2BB /* MyResults */,
 				9D24FDA5276503730095E2BB /* Home */,
 				9D1B89A8275F841C00089A6B /* GoogleService-Info.plist */,
 				9D1F921E2763D01B0098DCFE /* Models */,
@@ -219,13 +215,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		9D24FDA62765039E0095E2BB /* Courses */ = {
+		9D24FDA62765039E0095E2BB /* MyResults */ = {
 			isa = PBXGroup;
 			children = (
 				9D038391276716FC0087AC02 /* CoursesTableViewController.swift */,
 				9D038395276740260087AC02 /* Detals */,
 			);
-			path = Courses;
+			path = MyResults;
 			sourceTree = "<group>";
 		};
 		9D24FDA7276503B30095E2BB /* Challenges */ = {
@@ -242,8 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				9D6D6B602778666C003CAD6C /* ProfileVC.swift */,
-				9D6D6B6727789878003CAD6C /* LanguageVC.swift */,
-				9D6D6B69277898C9003CAD6C /* ThemeVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -412,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D6D6B6827789879003CAD6C /* LanguageVC.swift in Sources */,
 				9D1B89AB275F9D1700089A6B /* SignUpVC.swift in Sources */,
 				9D1F92202763D4600098DCFE /* SectionCollectionViewCell.swift in Sources */,
 				9D1F92222763FB110098DCFE /* SectionViewController.swift in Sources */,
@@ -424,7 +417,6 @@
 				9D0D71FC276870A700F11790 /* Information.swift in Sources */,
 				9D038392276716FD0087AC02 /* CoursesTableViewController.swift in Sources */,
 				9D0CD0202769DC590054B988 /* RegisterChallengesVC.swift in Sources */,
-				9D6D6B6A277898C9003CAD6C /* ThemeVC.swift in Sources */,
 				9D14D52F275E1A6600D04275 /* AppDelegate.swift in Sources */,
 				9D6D6B612778666C003CAD6C /* ProfileVC.swift in Sources */,
 				9D1053A627693ACC0074ADB2 /* ChallengesVC.swift in Sources */,

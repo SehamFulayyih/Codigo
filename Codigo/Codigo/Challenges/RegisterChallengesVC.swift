@@ -11,6 +11,9 @@ class RegisterChallengesVC: UIViewController {
     var setSectionImageView : UIImageView!
     @IBOutlet weak var imageChallenges: UIImageView!
        
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    
     var currentquestionindex : Int = 0
   
     var selectedLanguage : Language?
@@ -46,6 +49,8 @@ class RegisterChallengesVC: UIViewController {
     
     func setNextQuestion () {
         
+        // progressView.frame.size.width = (view.frame.size.width/ CGFloat (question.list.count)) * CGFloat (currentquestionindex + 1)
+        
         if   currentquestionindex < selectedLanguagequestion.count-1 {
             currentquestionindex += 1
             question.text = selectedLanguagequestion[currentquestionindex].question
@@ -55,7 +60,9 @@ class RegisterChallengesVC: UIViewController {
             
               alert.addAction(UIAlertAction(title: "Go to the languages you want", style: .default, handler: nil))
               self.present(alert, animated : true)
-          
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+                present(alert, animated: true, completion: nil)
 ///             desible Buttons
 ///            - true
 ///            - false

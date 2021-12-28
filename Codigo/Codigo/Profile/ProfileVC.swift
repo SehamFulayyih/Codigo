@@ -8,57 +8,95 @@
 import UIKit
 
 class ProfileVC: UITableViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    
+    func showAleartTheme() {
+        
+        let alert = UIAlertController(title: "Go to Setting to change the laguage", message: nil, preferredStyle: .alert)
 
-      
-    }
-    
-    
-    @IBAction func changeLanguage(_ sender: Any) {
-        //showAleartlanguage()
-    }
-   
-    
-    @IBAction func theme(_ sender: Any) {
-
-    }
-    
-    
-    @IBAction func doChangeLang(_ sender: Any) {
-    }
-    
-    
-    func showAleartlanguage(){
-        let alert = UIAlertController(title: "Select the language", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Arabic", style:.default, handler: {action in
-            print("Arabic")
+        alert.addAction(UIAlertAction(title: "Dark", style:.default, handler: {action in
+                self.Dark()
         }))
+        alert.addAction(UIAlertAction(title: "Light", style:.default, handler: {action in
+                self.light()
+        }))
+        present(alert, animated: true, completion: nil)
         
-        alert.addAction(UIAlertAction(title: "English", style: .cancel, handler: nil))
-        
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        
-        
-        alert.addAction(UIAlertAction(title: "Confirm", style: .destructive, handler: {action in
-            print("Confirm")
-    }))
-                        
-   present(alert, animated: true, completion: nil)
+    }
     
-  }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected section 0")
-        switch indexPath.section {
+    func Dark() {
+        let windowScene = UIApplication.shared.connectedScenes.first as! UIWindowScene
+        let window = windowScene.delegate as! SceneDelegate
+        window.window?.overrideUserInterfaceStyle = .dark
+        
+        overrideUserInterfaceStyle = .dark
+    }
+    func light() {
+        
+        let windowScene = UIApplication.shared.connectedScenes.first as! UIWindowScene
+        let window = windowScene.delegate as! SceneDelegate
+        window.window?.overrideUserInterfaceStyle = .light
+        
+        overrideUserInterfaceStyle = .light
+    }
+    func showAleartlanguage(){
+        let alert = UIAlertController(title: "Go to Setting to change the laguage", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style:.default, handler: {action in
+            self.changeLan()
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    func changeLan() {
+        
+        
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        
+        
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)") // Prints true
+            })}
+        
+        
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
         case 0:
-            print("selected section 0")
+            return 2
         case 1:
-            print("selected section 1")
+            return 2
+        default:
+            return 0
+        }
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 1:
+            switch indexPath.row {
+            case 0:
+                showAleartlanguage()
+            case 1:
+                showAleartTheme()
+            default:
+                break
+            }
         default:
             print("none selected")
         }
@@ -67,18 +105,16 @@ class ProfileVC: UITableViewController {
     
     
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-
-   
-
+    
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        // #warning Incomplete implementation, return the number of sections
+    //        return 0
+    //    }
+    //
+    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        // #warning Incomplete implementation, return the number of rows
+    //        return 0
+    //    }
+    
 }
 
