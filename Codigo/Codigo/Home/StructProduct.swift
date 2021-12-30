@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Product {
+struct Product2 {
     
     let name: String
     let imageName : String

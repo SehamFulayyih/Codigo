@@ -13,7 +13,6 @@ class RegisterChallengesVC: UIViewController {
        
     @IBOutlet weak var progressView: UIProgressView!
     
-    
     var currentquestionindex : Int = 0
   
     var selectedLanguage : Language?
@@ -49,7 +48,7 @@ class RegisterChallengesVC: UIViewController {
     
     func setNextQuestion () {
         
-        // progressView.frame.size.width = (view.frame.size.width/ CGFloat (question.list.count)) * CGFloat (currentquestionindex + 1)
+        progressView.frame.size.width = (view.frame.size.width / CGFloat (selectedLanguagequestion.count)) * CGFloat (currentquestionindex + 1)
         
         if   currentquestionindex < selectedLanguagequestion.count-1 {
             currentquestionindex += 1
@@ -87,18 +86,18 @@ class RegisterChallengesVC: UIViewController {
             let challengSwift1 = Challenges(imageChallenges: "image-13", question: "It is possible to write swift codes on windows?", answer: true)
             
            
-            let challengSwift2 = Challenges(imageChallenges: "", question: "Swift is an open source programming language?", answer: true)
+            let challengSwift2 = Challenges(imageChallenges: "image-13", question: "Swift is an open source programming language?", answer: true)
        
-            let challengSwift3 = Challenges(imageChallenges: "", question: "Swift is programming language that was introduced by Apple?", answer: true)
+            let challengSwift3 = Challenges(imageChallenges: "image-13", question: "Swift is programming language that was introduced by Apple?", answer: true)
            
             
-            let challengSwift4 = Challenges(imageChallenges: "", question: "When defining more than one variable on the same line, We separate each variable from the other with a + . sign?", answer: false)
+            let challengSwift4 = Challenges(imageChallenges: "image-13", question: "When defining more than one variable on the same line, We separate each variable from the other with a + . sign?", answer: false)
             
-            let challengSwift5 = Challenges(imageChallenges: "", question: "Commments are used to force the explanation of programming instruction to the programmer ?", answer: true)
+            let challengSwift5 = Challenges(imageChallenges: "image-13", question: "Commments are used to force the explanation of programming instruction to the programmer ?", answer: true)
             
-            let challengSwift6 = Challenges(imageChallenges: "", question: "The data type that has only two possible values Bool?", answer: true)
+            let challengSwift6 = Challenges(imageChallenges: "image-13", question: "The data type that has only two possible values Bool?", answer: true)
            
-            let challengSwift7 = Challenges(imageChallenges: "", question: "Modulus =! Represents the parameter NotEqual?", answer: true)
+            let challengSwift7 = Challenges(imageChallenges: "image-13", question: "Modulus =! Represents the parameter NotEqual?", answer: true)
             
             let challengSwift8 = Challenges(imageChallenges: "image-13", question: "It is a Swift Language used in recursion?", answer: false)
            
