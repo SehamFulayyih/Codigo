@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterChallengesVC: UIViewController {
     var setSectionImageView : UIImageView!
@@ -70,14 +71,12 @@ class RegisterChallengesVC: UIViewController {
         
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setSelectedLanguage = selectedLanguage
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
         
-        
+         
     }
     func populateChallenges(setSelectedLanguage: Language?){
         
@@ -148,9 +147,16 @@ class RegisterChallengesVC: UIViewController {
         question.text = selectedLanguagequestion.first?.question
         
     }
+    var ref : DocumentReference? = nil
+   
+    static func addResults(results:[String]) -> [String: Any] {
+       
+        let results = ["results":results]
+     as [String : Any]
+    
+        return results
+  
+}
     
 }
-
-
-
 

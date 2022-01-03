@@ -22,7 +22,7 @@ class SingUpVC :UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    func SignUp(email: String,password:String,userName: String) {
+    func SignUp(email: String,password:String,userName: String,results:[String]) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
             print("email:\(String(describing: authResult?.user.email))")
@@ -34,7 +34,7 @@ class SingUpVC :UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated : true)
             }else {
-                UserApi.addUser(name: "Seham", uid: authResult?.user.uid ?? "", phone: "", email: authResult?.user.email ?? "", completion: { singup in
+                UserApi.addUser(name: "Seham", uid: authResult?.user.uid ?? "", phone: "", email: authResult?.user.email ?? "", results: [""], completion: { singup in
                     if singup {
                         self.performSegue(withIdentifier: "home", sender: nil)
                     }
@@ -46,9 +46,10 @@ class SingUpVC :UIViewController {
     }
     @IBAction func signButton(_ sender: UIButton) {
         
-        SignUp(email: email.text ?? "", password: passWord.text  ?? "",userName:userName.text ?? "")
+        SignUp(email: email.text ?? "", password: passWord.text  ?? "",userName:userName.text ?? "", results: [])
         // self.performSegue(withIdentifier: "singUp", sender: nil)
         
     }
     
 }
+    
