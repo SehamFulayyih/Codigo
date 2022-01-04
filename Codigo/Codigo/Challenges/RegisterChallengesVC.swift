@@ -13,6 +13,7 @@ class RegisterChallengesVC: UIViewController {
     @IBOutlet weak var imageChallenges: UIImageView!
        
     @IBOutlet weak var progressView: UIProgressView!
+    progressView("Downloading")
     
     var currentquestionindex : Int = 0
   
@@ -66,9 +67,12 @@ class RegisterChallengesVC: UIViewController {
 ///             desible Buttons
 ///            - true
 ///            - false
-            
-        }
+            //
         
+           
+            print(User.addResults(results:["LearnSwift"," LearnPython","LearnJavascript"]))
+        }
+      
     }
     
     override func viewDidLoad() {
@@ -103,6 +107,7 @@ class RegisterChallengesVC: UIViewController {
             
             LearnSwift = [challengSwift1, challengSwift2, challengSwift3, challengSwift4, challengSwift5, challengSwift6, challengSwift7, challengSwift8]
             selectedLanguagequestion =  LearnSwift
+            
         case .javascript:
             let challengJavascript1 = Challenges(imageChallenges: "", question: "Represents Bollean values in javascript true,false?", answer: true)
             
@@ -147,16 +152,7 @@ class RegisterChallengesVC: UIViewController {
         question.text = selectedLanguagequestion.first?.question
         
     }
-    var ref : DocumentReference? = nil
-   
-    static func addResults(results:[String]) -> [String: Any] {
-       
-        let results = ["results":results]
-     as [String : Any]
     
-        return results
-  
-}
     
 }
 

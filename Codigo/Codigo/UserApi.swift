@@ -17,7 +17,7 @@ class UserApi {
         refUsers.document(uid).setData(User.CreateUser(passWord: phone, userName: name, email: email, results: results))
         
         completion(true)
-       // let refUsers = Firestore.firestore().RegisterChallengesVC("Users")
+      
     }
     
     
@@ -25,8 +25,7 @@ class UserApi {
         
         let refUsers = Firestore.firestore().collection("Users")
         
-      //  let refUsers = Firestore.firestore().RegisterChallengesVC("Users")
-        
+     
         refUsers.document(uid).setData(User.addResults(results: results),merge: true)
         
         completion(true)
