@@ -8,6 +8,7 @@
 import Foundation
 
 struct Challenges {
+    
     let imageChallenges : String
     let question : String
     let answer    : Bool

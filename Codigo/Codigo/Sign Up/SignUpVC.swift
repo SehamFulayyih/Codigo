@@ -27,14 +27,14 @@ class SingUpVC :UIViewController {
             
             print("email:\(String(describing: authResult?.user.email))")
             print("uid:\(String(describing: authResult?.user.uid))")
-            
+           
             
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated : true)
             }else {
-                UserApi.addUser(name: "Seham", uid: authResult?.user.uid ?? "", phone: "", email: authResult?.user.email ?? "", results: [""], completion: { singup in
+                UserApi.addUser(name: userName , uid: authResult?.user.uid ?? "", passWord:password, email: authResult?.user.email ?? "", results: [""], completion: { singup in
                     if singup {
                         self.performSegue(withIdentifier: "home", sender: nil)
                     }

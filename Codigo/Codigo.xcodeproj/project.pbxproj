@@ -159,7 +159,6 @@
 			children = (
 				9D0D71FD2768770E00F11790 /* Models. */,
 				9D24FDAB2765049F0095E2BB /* Segmented */,
-				9D24FDAA2765044B0095E2BB /* Animation */,
 				9D24FDA92765042B0095E2BB /* Sign Up */,
 				9D24FDA8276503FF0095E2BB /* Profile */,
 				9D24FDA7276503B30095E2BB /* Challenges */,
@@ -258,13 +257,6 @@
 				9D1B89AA275F9D1600089A6B /* SignUpVC.swift */,
 			);
 			path = "Sign Up";
-			sourceTree = "<group>";
-		};
-		9D24FDAA2765044B0095E2BB /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
 			sourceTree = "<group>";
 		};
 		9D24FDAB2765049F0095E2BB /* Segmented */ = {

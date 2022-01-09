@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
         guard let setselctedId = setselctedId else {
             return }
         
-     // UserApi.getUser(uid: <#T##String#>, completion: <#T##(User) -> Void#>)
+  //   UserApi.getUser(uid: <#T##String#>, completion: <#T##(User) -> Void#>)
          
         
             

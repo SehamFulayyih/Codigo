@@ -12,8 +12,11 @@ class RegisterChallengesVC: UIViewController {
     var setSectionImageView : UIImageView!
     @IBOutlet weak var imageChallenges: UIImageView!
        
-    @IBOutlet weak var progressView: UIProgressView!
-    progressView("Downloading")
+   
+    let refUsers = Firestore.firestore().collection("Users")
+    
+    @IBOutlet weak var progressView: UIView!
+    
     
     var currentquestionindex : Int = 0
   
@@ -26,8 +29,12 @@ class RegisterChallengesVC: UIViewController {
     var LearnPython : [Challenges] = []
     var  LearnJavascript  : [Challenges] = []
     var selectedLanguagequestion : [Challenges] = []
-    
-    
+    var checkResults = true
+   // if checkResults += 1  {
+ //       print("")
+  //  }else{
+       
+ //   }
     
     @IBAction func trueQl(_ sender: Any) {
         if selectedLanguagequestion[currentquestionindex].answer == true {
@@ -55,22 +62,24 @@ class RegisterChallengesVC: UIViewController {
         if   currentquestionindex < selectedLanguagequestion.count-1 {
             currentquestionindex += 1
             question.text = selectedLanguagequestion[currentquestionindex].question
+
+            
+      
         } else {
             
             let alert = UIAlertController(title: "Congratulation on solving the question", message: nil, preferredStyle: .alert)
             
               alert.addAction(UIAlertAction(title: "Go to the languages you want", style: .default, handler: nil))
-              self.present(alert, animated : true)
+             
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
                 present(alert, animated: true, completion: nil)
-///             desible Buttons
-///            - true
-///            - false
-            //
+
         
+         
            
-            print(User.addResults(results:["LearnSwift"," LearnPython","LearnJavascript"]))
+            
+           
         }
       
     }
@@ -79,7 +88,8 @@ class RegisterChallengesVC: UIViewController {
         super.viewDidLoad()
         setSelectedLanguage = selectedLanguage
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
-        
+        print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
+        UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["LearnSwift","LearnJavascript","LearnPython"])
          
     }
     func populateChallenges(setSelectedLanguage: Language?){

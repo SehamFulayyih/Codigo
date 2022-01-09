@@ -25,8 +25,37 @@ class DetalsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Animations()
+    }
+
+    fileprivate func Animations() {
+     UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+    self.setSectionImageView.transform = CGAffineTransform(rotationAngle: 120)
+} completion: { _ in
+    UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+        self.setSectionImageView.alpha = 0
+    } completion: { _ in
         
-        
+    }
+    UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+   self.sectionTitalLable.transform = CGAffineTransform(rotationAngle: 120)
+} completion: { _ in
+   UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+       self.sectionTitalLable.alpha = 0
+   } completion: { _ in
+       
+   }
+}
+    UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+   self.describetion.transform = CGAffineTransform(rotationAngle: 120)
+} completion: { _ in
+   UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseOut) {
+       self.describetion.alpha = 0
+   } completion: { _ in
+       
+   }
+}
+}
         self.setSectionImageView.image = UIImage(named: selectedSection.secondImage)
         
         sectionTitalLable.text = selectedSection.name

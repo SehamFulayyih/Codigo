@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eFw-dE-igE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-aZ-qtb">
-                                <rect key="frame" x="90" y="771" width="234" height="31"/>
+                                <rect key="frame" x="90" y="725" width="234" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Regester"/>
                                 <connections>
@@ -60,11 +60,11 @@
                         <constraints>
                             <constraint firstItem="1NO-AP-vzx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5i6-OA-IbW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VOF-LD-6QG" secondAttribute="trailing" constant="80" id="8ce-hW-YEo"/>
+                            <constraint firstItem="Rix-aZ-qtb" firstAttribute="top" secondItem="VOF-LD-6QG" secondAttribute="bottom" constant="40" id="9Rk-BD-OCa"/>
                             <constraint firstItem="Cpu-3x-jTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ac1-1t-qoO"/>
                             <constraint firstItem="Cpu-3x-jTg" firstAttribute="top" secondItem="1NO-AP-vzx" secondAttribute="bottom" constant="133" id="N8d-op-17k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cpu-3x-jTg" secondAttribute="trailing" constant="20" id="W51-xM-3pL"/>
                             <constraint firstItem="1NO-AP-vzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ysf-C0-VwG"/>
-                            <constraint firstItem="Rix-aZ-qtb" firstAttribute="top" secondItem="VOF-LD-6QG" secondAttribute="bottom" constant="86" id="cdu-8v-LJo"/>
                             <constraint firstItem="VOF-LD-6QG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="hCH-m1-P7T"/>
                             <constraint firstItem="Rix-aZ-qtb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="id9-CX-v6R"/>
                             <constraint firstItem="1NO-AP-vzx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p6x-ih-PSP"/>
@@ -143,7 +143,7 @@
                         <outlet property="email" destination="ghh-Sx-yTv" id="kWZ-yt-g82"/>
                         <outlet property="passWord" destination="YrQ-L1-mEy" id="XKz-Sf-Jmh"/>
                         <outlet property="userName" destination="6IA-fO-cop" id="A8Z-Yk-Z7k"/>
-                        <segue destination="eFw-dE-igE" kind="presentation" modalPresentationStyle="fullScreen" id="ClQ-B1-0O6"/>
+                        <segue destination="eFw-dE-igE" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="ClQ-B1-0O6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZN-bT-zfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,17 +255,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-D7-Vob" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="79" width="414" height="60"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W5f-T4-Yfz">
-                                        <rect key="frame" x="0.0" y="53" width="414" height="4"/>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                    </progressView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZL-7U-o1s" userLabel="Progress View">
+                                        <rect key="frame" x="0.0" y="51" width="15" height="10"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7iA-jw-IvW"/>
-                                    <constraint firstItem="W5f-T4-Yfz" firstAttribute="leading" secondItem="ZhK-D7-Vob" secondAttribute="leading" id="I87-zO-nnD"/>
-                                    <constraint firstAttribute="trailing" secondItem="W5f-T4-Yfz" secondAttribute="trailing" id="Khe-mh-ewq"/>
-                                    <constraint firstItem="W5f-T4-Yfz" firstAttribute="top" secondItem="ZhK-D7-Vob" secondAttribute="top" constant="53" id="jnp-Ur-PBt"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dnc-GO-38u">
@@ -362,13 +360,13 @@
                     <navigationItem key="navigationItem" id="t9c-EO-IEx"/>
                     <connections>
                         <outlet property="imageChallenges" destination="R6g-BX-lvm" id="7bx-aN-nP3"/>
-                        <outlet property="progressView" destination="W5f-T4-Yfz" id="zHn-LE-57T"/>
+                        <outlet property="progressView" destination="WZL-7U-o1s" id="xu7-LQ-kNw"/>
                         <outlet property="question" destination="dWU-ix-HrA" id="GcF-iD-rtJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPU-xf-1wO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6748" y="453"/>
+            <point key="canvasLocation" x="6747.826086956522" y="452.67857142857139"/>
         </scene>
         <!--Section View Controller-->
         <scene sceneID="4LK-uv-V59">
