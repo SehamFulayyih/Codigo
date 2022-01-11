@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import FirebaseAuth
+import WebKit
+
 
 class ProfileVC: UITableViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-    }
+        navigationItem.title = "User profile"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .done, target: Self.self, action: #selector(handleSignOutButtonTapped))
     
+    }
+
     func showAleartTheme() {
         
         let alert = UIAlertController(title: "Go to Setting to change the laguage", message: nil, preferredStyle: .alert)
@@ -103,18 +107,20 @@ class ProfileVC: UITableViewController {
         
     }
     
-    
-    // MARK: - Table view data source
-    
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
-    //
-    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        // #warning Incomplete implementation, return the number of rows
-    //        return 0
-    //    }
-    
+    @objc func handleSignOutButtonTapped(){
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive, handler: { (action) in
+            do{
+                try Auth.auth().signOut()
+                let welcomeController = UIViewController()
+                let welcomeNavigationController = UINavigationController(rootViewController: welcomeController)
+                self.present(welcomeNavigationController, animated: true ,completion: nil)
+            }catch let err{
+           print("failed to sign out with error",err)
+       //       service.showAleart(on:self , style: .alert , title: "sign Out Erre" , message: err.localizedDescription)
+            }
+        } )
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+    //   service.showAleart(on:self , style: .actionSheet , title: nil , message: nil ,action: [signOutAction, cancelAction] , completion: nil )
+    }
 }
 

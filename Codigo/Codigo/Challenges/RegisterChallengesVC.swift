@@ -12,7 +12,7 @@ class RegisterChallengesVC: UIViewController {
     var setSectionImageView : UIImageView!
     @IBOutlet weak var imageChallenges: UIImageView!
        
-   
+    
     let refUsers = Firestore.firestore().collection("Users")
     
     @IBOutlet weak var progressView: UIView!
@@ -29,16 +29,17 @@ class RegisterChallengesVC: UIViewController {
     var LearnPython : [Challenges] = []
     var  LearnJavascript  : [Challenges] = []
     var selectedLanguagequestion : [Challenges] = []
-    var checkResults = true
-   // if checkResults += 1  {
- //       print("")
-  //  }else{
-       
- //   }
+    //var checkResults : [Bool] = []
+    let ischeckResults = true
     
     @IBAction func trueQl(_ sender: Any) {
-        if selectedLanguagequestion[currentquestionindex].answer == true {
+    if selectedLanguagequestion[currentquestionindex].answer ==
+        true //,
+      //   ischeckResults
+        {
+      //  print("showresults")
             setNextQuestion()
+       
         } else {
            
         }
@@ -63,9 +64,7 @@ class RegisterChallengesVC: UIViewController {
             currentquestionindex += 1
             question.text = selectedLanguagequestion[currentquestionindex].question
 
-            
-      
-        } else {
+            } else {
             
             let alert = UIAlertController(title: "Congratulation on solving the question", message: nil, preferredStyle: .alert)
             
@@ -74,13 +73,7 @@ class RegisterChallengesVC: UIViewController {
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
                 present(alert, animated: true, completion: nil)
-
-        
-         
-           
-            
-           
-        }
+         }
       
     }
     
@@ -90,11 +83,15 @@ class RegisterChallengesVC: UIViewController {
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
         print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
         UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["LearnSwift","LearnJavascript","LearnPython"])
-         
+        if  ischeckResults ,((currentquestionindex + 1) != 0) {
+            print("showresults[]")
+        }else{
+            
+        }
+        
     }
     func populateChallenges(setSelectedLanguage: Language?){
-        
-        switch setSelectedLanguage {
+       switch setSelectedLanguage {
         case .swift:
             let challengSwift1 = Challenges(imageChallenges: "image-13", question: "It is possible to write swift codes on windows?", answer: true)
             
@@ -165,4 +162,5 @@ class RegisterChallengesVC: UIViewController {
     
     
 }
+
 
