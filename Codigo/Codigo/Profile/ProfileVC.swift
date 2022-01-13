@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import WebKit
+import SwiftUI
 
 
 class ProfileVC: UITableViewController {
@@ -16,7 +17,7 @@ class ProfileVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "User profile"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .done, target: Self.self, action: #selector(handleSignOutButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
     
     }
 
@@ -108,19 +109,24 @@ class ProfileVC: UITableViewController {
     }
     
     @objc func handleSignOutButtonTapped(){
-        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive, handler: { (action) in
+        
+        let alert = UIAlertController(title: "signout", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style:.default, handler: {action in
             do{
                 try Auth.auth().signOut()
                 let welcomeController = UIViewController()
                 let welcomeNavigationController = UINavigationController(rootViewController: welcomeController)
                 self.present(welcomeNavigationController, animated: true ,completion: nil)
             }catch let err{
-           print("failed to sign out with error",err)
-       //       service.showAleart(on:self , style: .alert , title: "sign Out Erre" , message: err.localizedDescription)
+             print("failed to sign out with error",err)
+              
             }
-        } )
-        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
-    //   service.showAleart(on:self , style: .actionSheet , title: nil , message: nil ,action: [signOutAction, cancelAction] , completion: nil )
-    }
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+    
+        present(alert, animated: true, completion: nil)
+    
 }
 
+}

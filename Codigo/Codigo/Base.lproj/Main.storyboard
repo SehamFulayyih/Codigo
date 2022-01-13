@@ -283,7 +283,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image18" translatesAutoresizingMaskIntoConstraints="NO" id="R6g-BX-lvm" userLabel="imageChallenges">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6g-BX-lvm" userLabel="imageChallenges">
                                                 <rect key="frame" x="60" y="40" width="294" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="EHg-bA-epE"/>
@@ -836,7 +836,6 @@
         <image name="house.circle" catalog="system" width="128" height="121"/>
         <image name="image" width="1162" height="948"/>
         <image name="image16" width="1170" height="2275"/>
-        <image name="image18" width="326" height="155"/>
         <image name="image2" width="1111" height="947"/>
         <image name="image22" width="326" height="155"/>
         <image name="image23png" width="67" height="85"/>
