@@ -21,6 +21,9 @@ class RegisterChallengesVC: UIViewController {
     
     var currentquestionindex : Int = 0
   
+    var score : Int = 0
+    var rongScore : Int = 0
+    
     var selectedLanguage : Language?
     var setSelectedLanguage : Language?
     
@@ -34,26 +37,25 @@ class RegisterChallengesVC: UIViewController {
     let ischeckResults = true
    
     @IBAction func trueQl(_ sender: Any) {
-    if selectedLanguagequestion[currentquestionindex].answer ==
-        true //,
-      //   ischeckResults
-        {
-      //  print("showresults")
-            setNextQuestion()
-       
+   
+        if selectedLanguagequestion[currentquestionindex].answer == true {
+            score += 1
         } else {
-           
+            rongScore += 1
         }
-        
+        setNextQuestion()
     }
     
     
     @IBAction func falseQl(_ sender: Any) {
+
         if selectedLanguagequestion[currentquestionindex].answer == false {
-            setNextQuestion()
-        }else{
-           
+            score += 1
+        } else {
+            rongScore += 1
         }
+        
+        setNextQuestion()
     }
     
     
@@ -67,7 +69,7 @@ class RegisterChallengesVC: UIViewController {
 
             } else {
             
-            let alert = UIAlertController(title: "Congratulation on solving the question", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Congratulation on solving the question", message: "Your Score is \(score) and the wrong answer is :\(rongScore)", preferredStyle: .alert)
             
               alert.addAction(UIAlertAction(title: "Go to the languages you want", style: .default, handler: { action in
 
@@ -97,6 +99,7 @@ class RegisterChallengesVC: UIViewController {
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
         print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
         UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["LearnSwift","LearnJavascript","LearnPython"])
+        
         if  ischeckResults ,((currentquestionindex + 1) != 0) {
             print("showresults[]")
         }else{
@@ -108,7 +111,7 @@ class RegisterChallengesVC: UIViewController {
        switch setSelectedLanguage {
         case .swift:
            imageChallenges.image = UIImage(named: imagesNames[0])
-            let challengSwift1 = Challenges(imageChallenges: "image18", question: "It is possible to write swift codes on windows?", answer: true)
+           let challengSwift1 = Challenges(imageChallenges: "image18", question: "It is possible to write swift codes on windows?", answer: true)
             
            
             let challengSwift2 = Challenges(imageChallenges: "image18", question: "Swift is an open source programming language?", answer: true)

@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 import WebKit
-import SwiftUI
+import Firebase
 
 
 class ProfileVC: UITableViewController {
@@ -16,6 +16,7 @@ class ProfileVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = "User profile"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
     
@@ -109,7 +110,13 @@ class ProfileVC: UITableViewController {
     }
     
     @objc func handleSignOutButtonTapped(){
-        
+      //  if Auth.auth().currentUser != nil {
+       //     performSegue(withIdentifier: "", sender: nil)
+      //  }
+     //   func viewDidAppear(_ animated: Bool) {
+        //    super.viewDidAppear(animated)
+         //   handleSignOutButtonTapped()
+      //  }
         let alert = UIAlertController(title: "signout", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style:.default, handler: {action in
             do{
@@ -128,5 +135,6 @@ class ProfileVC: UITableViewController {
         present(alert, animated: true, completion: nil)
     
 }
+   
 
 }

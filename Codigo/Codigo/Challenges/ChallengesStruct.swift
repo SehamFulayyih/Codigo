@@ -13,5 +13,4 @@ struct Challenges {
     let question : String
     let answer    : Bool
     
-    
 }

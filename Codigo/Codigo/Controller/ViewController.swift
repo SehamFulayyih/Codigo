@@ -21,7 +21,11 @@ class ViewController: UIViewController {
         print("Click Tap Gesture On Screen")
     }
     @IBAction func clicktapgestureimage(_ sender: Any) {
+        
         print("Click Image Tap Gesture Successfully")
+        // self.performSegue(withIdentifier: "home", sender: nil)
+      
     }
     
 }
+
