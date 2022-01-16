@@ -2,25 +2,26 @@
 finalproject
  ## Description
 First of all, you have to choose the field of programming that you will complete, and there are many areas of programming.
-To program iOS applications (Apple phones), you will need to learn one of the following languages, either Swift or Objective-C Programming There are several languages that you can learn one of them, such as java,or payton, will allow you to program applications that work on different systems
-Or c# for programming applications running on windows systems
-Or Objective-C or Swift languagesfor programming applications running on Mac (Apple computers)
+To program iOS applications (Apple phones), you will need to learn one of the following languages, either Swift or Objective-C Programming There are several languages that you can learn one of them, Python can be used to create simple programs for beginners,and to complete large projects at the same time. It is often recommended for beginners in programming to learn this language as it is among the fastest programming languages to learn,JavaScript is used to create interactive web pages and to provide web applications including games; It is used by the majority of websites, and is supported by almost all browsers without the need for third-party add-ons. 
+
 
 ## This application helps to achieve his vision 2030 to learn some programming languages in a simplified manner, as it is easy for the novice to learn
 ## Sense
-+ profile :settings are in it, a language and a theme
-+ challenges:question and answer for each section
-+ Courses:mycourses
-+ Home: a collection of the tracks to be taught and a description and informations of each track
++ profile : username and email settings :are in it, a language and a theme :dark and light mood .  SignOut
++ challenges:question and answer for each section savedata firbase score and rongScore
++ MyResults. getdata firbase score and rongScore 
++ Home: a collection of the tracks to be taught and a Titale and description and informations of each track
 
 ##  User Stories
-+ As a user ,I can Registration by email and password
++ As a user ,I can Registration by email and password and username
 + As a user ,I can login by email and password
-+ As a user use the Course
-+ As a user The application has challenges and courses
++ As a user use MyResults
++ As a user The application has challenges and MyResults
++ As a user score Questions are over
++ As a user account score and rongScore finish Questions
 + As a user ,participate in the challenges
 + As a user, Ican change the theme in the profile
 + As a user , Ican change the language in the profile
-+ As a user , take a description and information for each track on the home page
-
++ As a user , take a Titale and description and information for each track on the home page
++ As a user SignOut in profile 
 ## As a programmer, I would like to pursue our noble vision of teaching some programming languages for beginners
