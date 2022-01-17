@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
-
+import Firebase
 class UserApi {
     
     static func addUser(name:String,uid:String,passWord:String,email:String,results:[String],completion: @escaping (Bool) -> Void) {
@@ -33,8 +33,7 @@ class UserApi {
     
     static func getUser(uid:String,completion: @escaping (User) -> Void) {
        
-        let refUsers =  Firestore.firestore().collection("Users")// .firestore().collection("Users")
-   
+        let refUsers =  Firestore.firestore().collection("Users")
         refUsers.document(uid).getDocument { document, error in
             if let document = document, document.exists {
                 let user = User.getUser(dict: document.data()!)

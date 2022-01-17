@@ -33,7 +33,7 @@ class RegisterChallengesVC: UIViewController {
     var LearnPython : [Challenges] = []
     var  LearnJavascript  : [Challenges] = []
     var selectedLanguagequestion : [Challenges] = []
-    //var checkResults : [Bool] = []
+    
     let ischeckResults = true
    
     @IBAction func trueQl(_ sender: Any) {
@@ -69,44 +69,49 @@ class RegisterChallengesVC: UIViewController {
 
             } else {
             
-            let alert = UIAlertController(title: "Congratulation on solving the question", message: "Your Score is \(score) and the wrong answer is :\(rongScore)", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Congratulation on solving the question".localizable, message: "Your Score is".localizable + "\(score)" + "and the wrong answer is :".localizable + "\(rongScore)", preferredStyle: .alert)
             
-              alert.addAction(UIAlertAction(title: "Go to the languages you want", style: .default, handler: { action in
-
-//                  let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//
-//                  let vc = storyBoard.instantiateViewController(withIdentifier: "ChallengesVC")
-//                  vc.modalPresentationStyle = .fullScreen
-//                  self.present(vc, animated: true)
+                alert.addAction(UIAlertAction(title: "Go to the languages you want".localizable, style: .default, handler: { [self] action in
                   
+                  self.writeToFirebase()
+                 
                   self.navigationController?.popViewController(animated: true)
                   
              }))
              
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cancel".localizable, style: .destructive, handler: nil))
                 
             present(alert, animated: true, completion: nil)
                
             
          }
+        
       
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setSelectedLanguage = selectedLanguage
+    func writeToFirebase() {
+    setSelectedLanguage = selectedLanguage
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
         print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
-        UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["LearnSwift","LearnJavascript","LearnPython"])
+        UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["\(score)"])
+         
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+   setSelectedLanguage = selectedLanguage
+       populateChallenges(setSelectedLanguage: setSelectedLanguage)
+        print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
+       UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["score ","rongScore"])
         
         if  ischeckResults ,((currentquestionindex + 1) != 0) {
             print("showresults[]")
         }else{
             
         }
-        
-    }
+          }
+    
+    
     func populateChallenges(setSelectedLanguage: Language?){
        switch setSelectedLanguage {
         case .swift:

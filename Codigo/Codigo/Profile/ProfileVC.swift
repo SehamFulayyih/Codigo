@@ -18,18 +18,18 @@ class ProfileVC: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "User profile"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut".localizable, style: .done, target: self, action: #selector(handleSignOutButtonTapped))
     
     }
 
     func showAleartTheme() {
         
-        let alert = UIAlertController(title: "Go to Setting to change the laguage", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Go to Setting to change the laguage".localizable, message: nil, preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Dark", style:.default, handler: {action in
+        alert.addAction(UIAlertAction(title: "Dark".localizable, style:.default, handler: {action in
                 self.Dark()
         }))
-        alert.addAction(UIAlertAction(title: "Light", style:.default, handler: {action in
+        alert.addAction(UIAlertAction(title: "Light".localizable, style:.default, handler: {action in
                 self.light()
         }))
         present(alert, animated: true, completion: nil)
@@ -52,12 +52,12 @@ class ProfileVC: UITableViewController {
         overrideUserInterfaceStyle = .light
     }
     func showAleartlanguage(){
-        let alert = UIAlertController(title: "Go to Setting to change the laguage", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style:.default, handler: {action in
+        let alert = UIAlertController(title: "Go to Setting to change the laguage".localizable, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay".localizable, style:.default, handler: {action in
             self.changeLan()
             
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localizable, style: .destructive, handler: nil))
         
         
         present(alert, animated: true, completion: nil)
@@ -117,8 +117,8 @@ class ProfileVC: UITableViewController {
         //    super.viewDidAppear(animated)
          //   handleSignOutButtonTapped()
       //  }
-        let alert = UIAlertController(title: "signout", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style:.default, handler: {action in
+        let alert = UIAlertController(title: "signout".localizable, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay".localizable, style:.default, handler: {action in
             do{
                 try Auth.auth().signOut()
                 let welcomeController = UIViewController()
@@ -130,7 +130,7 @@ class ProfileVC: UITableViewController {
             }
             
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localizable, style: .destructive, handler: nil))
     
         present(alert, animated: true, completion: nil)
     

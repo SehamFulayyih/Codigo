@@ -5,3 +5,47 @@
   Created by Seham الشطنان on 11/06/1443 AH.
   
 */
+
+
+"Congratulation on solving the question" = "مبروك .. تم حل الاسئلة" ;
+
+"Your Score is" = "نتيجتك هي";
+"and the wrong answer is :" = "والجواب الخاطئ هو";
+"Go to the languages you want" = "انتقل إلى اللغات التي تريدها";
+"Cancel" = "يلغي";
+"signout" = "خروج";
+"Okay" = "نعم";
+"Cancel" = "يلغي";
+"SignOut" = "خروج";
+"Go to Setting to change the laguage" = "انتقل إلى الإعداد لتغيير اللغة";
+"Dark" = "دارك";
+"Light" = "لايت";
+//"Go to Setting to change the laguage" = "انتقل إلى الإعداد لتغيير اللغة";
+"Okay" = "نعم";
+"Cancel" = "يلغي";
+"swift" = "سويفت";
+"is friendly to new programmers.It's an industrial-quality programming language that's as expresssive and enjoyable as a scripting language." = "صديقة للمبرمجين الجدد. إنها لغة برمجة ذات جودة صناعية معبرة وممتعة مثل لغة البرمجة.";
+"Output" = "النتيجة";
+"Variable" = "المتغيرات";
+"ForLoop" = "لحلقة";
+"Boolean" = "قيمة منطقية";
+"ConditionalStatement" = "عبارة شرطية";
+"Dictionarie" = "قاموس";
+"Array" = "مجموعة مصفوفة";
+"javascript" = "جافا سكريبت";
+"is the world's most popular programming language with first-class functions." = "هي أشهر لغات البرمجة في العالم بوظائف من الدرجة الأولى";
+"Output" = "النتيجة";
+"Variable" = "المتغيرات";
+"ForLoop" = "لحلقة";
+"Boolean" = "قيمة منطقية";
+"ConditionalStatement" = "عبارة شرطية";
+"Array" = "مجموعة مصفوفة";
+"python" = "بايثون";
+"is the most wanted language.Python's simple easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance." = "هي اللغة الأكثر طلبًا. يؤكد بناء جملة Python البسيط سهل التعلم على قابلية القراءة وبالتالي يقلل من تكلفة صيانة البرنامج";
+"Output" = "النتيجة";
+"Variable" = "المتغيرات";
+"ForLoop" = "لحلقة";
+"List" = "قائمة";
+"Dictionarie" = "قاموس";
+"Boolean" = "قيمة منطقية";
+"ConditionalStatement" = "عبارة شرطية";
