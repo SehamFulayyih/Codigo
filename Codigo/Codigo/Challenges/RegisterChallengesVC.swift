@@ -93,7 +93,7 @@ class RegisterChallengesVC: UIViewController {
     setSelectedLanguage = selectedLanguage
         populateChallenges(setSelectedLanguage: setSelectedLanguage)
         print("Auth.auth().currentUser?.uid ??:\(Auth.auth().currentUser?.uid ?? "nil")")
-        UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["\(score)"])
+        UserApi.addresults(uid: Auth.auth().currentUser?.uid ?? "", results: ["score\(score)"])
          
     }
     override func viewDidLoad() {

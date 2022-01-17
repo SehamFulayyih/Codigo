@@ -17,7 +17,7 @@ class ProfileVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "User profile"
+        navigationItem.title = "User profile".localizable
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut".localizable, style: .done, target: self, action: #selector(handleSignOutButtonTapped))
     
     }
