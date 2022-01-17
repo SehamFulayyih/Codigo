@@ -9,13 +9,11 @@ To program iOS applications (Apple phones), you will need to learn one of the fo
 ## Sense
 + profile : username and email settings :are in it, a language and a theme :dark and light mood .  SignOut
 + challenges:question and answer for each section savedata firbase score and rongScore
-+ MyResults. getdata firbase score and rongScore 
 + Home: a collection of the tracks to be taught and a Titale and description and informations of each track
 
 ##  User Stories
 + As a user ,I can Registration by email and password and username
 + As a user ,I can login by email and password
-+ As a user use MyResults
 + As a user The application has challenges and MyResults
 + As a user score Questions are over
 + As a user account score and rongScore finish Questions
